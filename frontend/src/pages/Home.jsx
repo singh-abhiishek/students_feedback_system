@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import CourseList from '../components/CourseList'
 import Footer from '../components/Footer'
+import Banner from '../components/Banner'
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Navbar />
             <Hero />
             <CourseList />
+            <Banner />
             <Footer />
         </>
     )
