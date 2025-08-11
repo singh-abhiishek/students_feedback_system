@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CourseList = () => {
   // Static Data (You can replace with API data later)
@@ -17,7 +18,9 @@ const CourseList = () => {
         <h2 className="text-3xl font-bold text-center mb-8">Available Courses</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {courses.map((course) => (
-            <div
+            <Link
+              to={`/course-details/${course.id}`}
+
               key={course.id}
               className="bg-white shadow-md rounded-lg p-5 hover:shadow-lg transition"
             >
@@ -29,7 +32,7 @@ const CourseList = () => {
               <button className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">
                 See More
               </button>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
